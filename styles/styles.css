@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'Fontin-SmallCaps';
+    src: url('fonts/Fontin-SmallCaps.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Fontin-SmallCaps', serif;
+    background-color: #2e1a3a;
+    color: #7f7f7f;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar { 
+    display: none;
+}
+
+.site-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.content-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.league {
+    margin-top: 20px;
+    width: 250px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.leaguebtn {
+    background-color: #3e2755;
+    color: #ffffff;
+    padding: 16px;
+    font-size: 16px;
+    font-family: 'Fontin-SmallCaps', serif;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+    border: 2px solid #a79f9f;
+    width: 100%;
+}
+
+.league-content {
+    display: none;
+    position: absolute;
+    background-color: #2b1631;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.league-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.league-content a:hover {
+    background-color: #4c2b54;
+    border-radius: 5px;
+}
+
+.league:hover .league-content {
+    display: block;
+}
+
+.league:hover .leaguebtn {
+    background-color: #4c2b54;
+}
+
+#item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.item-card {
+    display: flex;
+    padding-top: 10px;
+    background-color: #3e2755;
+    flex-direction: column;
+    width: calc((100% - 40px) / 3);
+    height: 300px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.item-image-container {
+    height: 80%;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #2b1631;
+    border-radius: 5px;
+}
+
+.item-card img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.item-text-container {
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.item-tooltip {
+    width: 400px;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    padding-bottom: 10px;
+    font-family: 'Fontin-SmallCaps', serif;
+    font-size: 16px;
+    color: #7f7f7f;
+}
+
+.item-name {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.item-name2 {
+    color: #ffff77;
+    font-size: 20px;
+}
+
+.item-type {
+    color: #ffff77;
+    font-size: 20px;
+}
+
+.item-properties, .item-requirements {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.item-mods {
+    color: #8888ff;
+}
+
+.item-implicit, .item-explicit {
+    color: #8888ff;
+    text-align: center;
+}
+
+.item-crafted {
+    color: #b9eaea;
+    text-align: center;
+}
+
+.item-enchant {
+    color: #b9eaea;
+    text-align: center;
+}
+
+.separator {
+    height: 2px;
+    background: url('https://thesettle.shop/_next/image?url=%2Fmisc%2Fmod-sep.png&w=640&q=75') no-repeat center center;
+    background-size: cover;
+    margin: 10px 0;
+}
+
+.value {
+    color: #ffffff;
+}
+
+.augmented {
+    color: #8888ff;
+}
+
+.tippy-content {
+    padding: 0 !important;
+}
+
+.custom-scrollbar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #2e1a3a;
+    z-index: 1000;
+}
+
+.custom-scrollbar-thumb {
+    width: 100%;
+    background-color: #7f7f7f;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+@media (max-width: 1200px) {
+    .item-card {
+        width: calc((100% - 20px) / 2);
+    }
+}
+
+@media (max-width: 768px) {
+    .item-card {
+        width: 100%;
+    }
+    
+    .league {
+        width: 100%;
+    }
+}
